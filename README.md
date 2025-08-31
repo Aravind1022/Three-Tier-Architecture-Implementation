@@ -30,7 +30,7 @@ Change : bind-address = 0.0.0.0
 **Restart MySQl:**
 sudo systemctl restart mysql
 
-
+---
 ## Step 3. Setup Backend VM
 
 sudo apt update && sudo apt install python3-venv -y
@@ -40,7 +40,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 python api.py
 
-
+---
 ## Step 4.  Setup Frontend VM
 
 sudo apt update && sudo apt install apache2 -y
