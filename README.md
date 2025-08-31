@@ -48,5 +48,26 @@ Change : bind-address = 0.0.0.0
 sudo systemctl restart mysql
 ```
 
+<<<<<<< HEAD
 
 
+=======
+---
+## Step 3. Setup Backend VM
+
+sudo apt update && sudo apt install python3-venv -y
+cd ~/backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python api.py
+
+---
+## Step 4.  Setup Frontend VM
+
+sudo apt update && sudo apt install apache2 -y
+sudo a2enmod proxy proxy_http
+sudo cp frontend/apache-proxy.conf /etc/apache2/sites-available/000-default.conf
+sudo cp frontend/index.html /var/www/html/index.html
+sudo systemctl restart apache2
+>>>>>>> c71b151b5139b414dd76e8428f8220fc43f54adc
