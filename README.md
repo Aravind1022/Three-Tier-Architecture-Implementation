@@ -29,6 +29,7 @@ Change : bind-address = 0.0.0.0
 
 **Restart MySQl:**
 sudo systemctl restart mysql
+.
 
 
 ## Step 3. Setup Backend VM
