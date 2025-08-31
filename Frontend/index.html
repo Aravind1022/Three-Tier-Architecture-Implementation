@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>3-Tier Demo</title>
+  </head>
+  <body>
+    <h1>Frontend - Azure 3-Tier Architecture</h1>
+    <p>Backend API Response:</p>
+    <div id="result"></div>
+
+    <script>
+      fetch('/api/message')
+        .then(r => r.json())
+        .then(data => {
+          document.getElementById("result").innerText = data.message;
+        })
+        .catch(err => {
+          document.getElementById("result").innerText = "Error: " + err;
+        });
+    </script>
+  </body>
+</html>
